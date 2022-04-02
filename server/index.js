@@ -10,6 +10,10 @@ app.use(cors())
 //Express Settings
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
+
+// configure our server port
+const port = process.env.PORT || 5000;
+
 // app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
